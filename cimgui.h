@@ -597,6 +597,7 @@ struct ImGuiStyle
     bool AntiAliasedLines;
     bool AntiAliasedFill;
     float CurveTessellationTol;
+    float CircleSegmentMaxError;
     ImVec4 Colors[ImGuiCol_COUNT];
 };
 struct ImGuiIO
@@ -913,10 +914,10 @@ struct ImFont
     short ConfigDataCount;
     ImWchar FallbackChar;
     ImWchar EllipsisChar;
+    bool DirtyLookupTables;
     float Scale;
     float Ascent, Descent;
     int MetricsTotalSurface;
-    bool DirtyLookupTables;
 };
 struct ImGuiPlatformMonitor
 {
